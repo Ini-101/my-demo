@@ -21,6 +21,6 @@ jobs:
           echo "Path is ... $PATH"
            
       - name: run git commands
-      - run: |
+        run: |
            git clone https://github.com/Ini-effectual/my-demo.git
-           git push --mirror https://github.com/Ini-effectual/my-test.git
+           git clone --mirror https://github.com/Ini-effectual/my-test.git
