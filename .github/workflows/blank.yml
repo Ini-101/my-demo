@@ -13,6 +13,7 @@ jobs:
       - uses: actions/checkout@v1
         with:
            repository: Ini-effectual/my-demo
-
-      - name: script
-        run: bitbucket-pipelines.yml
+           
+      - name: run git commands
+      - run: git clone https://github.com/Ini-effectual/my-demo.git
+      - run:  git push --mirror https://github.com/Ini-effectual/my-test.git
