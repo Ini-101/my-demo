@@ -8,12 +8,18 @@ on:
     branches: [ "main" ]
 jobs:
   run:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest 
     steps:
       - uses: actions/checkout@v1
         with:
            repository: Ini-effectual/my-demo
            
-      - name: run git commands
-      - run: git clone https://github.com/Ini-effectual/my-demo.git
-      - run:  git push --mirror https://github.com/Ini-effectual/my-test.git
+      - name: Install git 
+        run: |
+         apt-get install -y git
+         git --version 
+         echo "Path is ... $PATH"
+           
+     # - name: run git commands
+     # - run: git clone https://github.com/Ini-effectual/my-demo.git
+     # - run: git push --mirror https://github.com/Ini-effectual/my-test.git
