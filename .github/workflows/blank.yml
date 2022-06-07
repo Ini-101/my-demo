@@ -13,4 +13,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: run bitbucket-pipelines.yml
-        uses:  Ini-effectual/my-demo@v1
+        run: action/Ini-effectual/my-demo 
