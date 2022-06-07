@@ -24,11 +24,12 @@ jobs:
            mv id_rsa ~/.ssh/
            cat ~/.ssh/id_rsa
            mv config ~/.ssh/
+           'echo $PRIVATE_KEY > test'
+           cat test
            git config --global user.name 'Ini-effectual'
            git config --global user.email 'ini.inyang@effectual.com'
-           cat ~/.ssh/config
+           #cat ~/.ssh/config
            git clone --mirror git@github.com:Ini-effectual/my-test.git
-           'echo $PRIVATE_KEY > test'
            cat test
            env: 
             PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
