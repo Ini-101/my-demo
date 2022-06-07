@@ -10,14 +10,14 @@ jobs:
   run:
     runs-on: ubuntu-latest 
     steps:
+      - env: 
+            PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
       - uses: actions/checkout@v3
-           
       - name: Install git 
         run: |
           sudo apt-get install -y git
           git --version
           echo "Path is ... $PATH"
-    
       - run: | 
            mkdir ~/.ssh
            chmod 600 id_rsa
@@ -30,6 +30,3 @@ jobs:
            git config --global user.name 'Ini-effectual'
            git config --global user.email 'ini.inyang@effectual.com'
            git clone --mirror git@github.com:Ini-effectual/my-test.git
-           env: 
-            PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
-            shell: bash
