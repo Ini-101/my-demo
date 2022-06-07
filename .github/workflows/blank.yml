@@ -22,10 +22,13 @@ jobs:
            mkdir ~/.ssh
            mv id_rsa ~/.ssh/
            cat ~/.ssh/id_rsa
+           mv config ~/.ssh/
            git config --global user.name 'Ini-effectual'
            git config --global user.email 'ini.inyang@effectual.com'
            sudo git clone git@github.com:Ini-effectual/my-demo.git
            sudo git clone --mirror git@github.com:Ini-effectual/my-test.git
+           'echo $PRIVATE_KEY > test'
+           cat test
            env: 
             PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
-           shell: bash
+            shell: bash
