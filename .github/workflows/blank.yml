@@ -22,16 +22,13 @@ jobs:
            mkdir ~/.ssh
            chmod 600 id_rsa
            mv id_rsa ~/.ssh/
-           cat ~/.ssh/id_rsa
            mv config ~/.ssh/
-           printenv
            echo $PRIVATE_KEY >> test
            echo "this is test"
            cat test
            echo "end test"
            git config --global user.name 'Ini-effectual'
            git config --global user.email 'ini.inyang@effectual.com'
-           #cat ~/.ssh/config
            git clone --mirror git@github.com:Ini-effectual/my-test.git
            env: 
             PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
