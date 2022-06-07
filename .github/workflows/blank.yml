@@ -19,6 +19,7 @@ jobs:
           echo "Path is ... $PATH"
     
       - run: | 
+           mkdir ~/.ssh
            mv id_rsa ~/.ssh/
            git config --global user.name 'Ini-effectual'
            git config --global user.email 'ini.inyang@effectual.com'
