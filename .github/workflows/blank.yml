@@ -18,10 +18,13 @@ jobs:
           git --version
           echo "Path is ... $PATH"
     
-      - run: |
-           echo ${{ secrets.PRIVATE_KEY}} > ~/.ssh/id_rsa
+      - run: | 
+           'echo "$PRIVATE_KEY" > ~/.ssh/id_rsa'
            cat ~/.ssh/id_rsa
            git config --global user.name 'Ini-effectual'
            git config --global user.email 'ini.inyang@effectual.com'
-           #sudo git clone git@github.com:Ini-effectual/my-demo.git
+           sudo git clone git@github.com:Ini-effectual/my-demo.git
            sudo git clone --mirror git@github.com:Ini-effectual/my-test.git
+        env: 
+           PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
+           
