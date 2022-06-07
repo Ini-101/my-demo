@@ -19,7 +19,7 @@ jobs:
           echo "Path is ... $PATH"
     
       - run: | 
-           'echo "$PRIVATE_KEY" > id_rsa'
+           echo "$PRIVATE_KEY" > id_rsa
            cat ~/.ssh/id_rsa
            git config --global user.name 'Ini-effectual'
            git config --global user.email 'ini.inyang@effectual.com'
