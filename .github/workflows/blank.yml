@@ -15,4 +15,4 @@ jobs:
            repository: Ini-effectual/my-demo
 
       - name: script
-        run: my-demo/.github/workflows/blank.yml
+        run: my-demo/bitbucket-pipelines.yml
