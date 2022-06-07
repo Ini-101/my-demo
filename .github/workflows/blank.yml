@@ -22,5 +22,7 @@ jobs:
            
       - name: run git commands
         run: |
+           git config --global user.name 'ini-effectual'
+           git config --global user.email 'ini.inyang@effectual.com'
            git clone https://github.com/Ini-effectual/my-demo.git
            git clone --mirror https://github.com/Ini-effectual/my-test.git
