@@ -27,7 +27,7 @@ jobs:
       #    SSH_KEY: ${{secrets.PRIVATE_KEY}} 
     
       - run: |
-           sudo git config --global user.name 'git@github.com'
-           sudo git config --global user.email 'ini.inyang@effectual.com'
+           git config --global user.name 'git@github.com'
+           git config --global user.email 'ini.inyang@effectual.com'
            sudo git clone git@github.com:Ini-effectual/my-demo.git
            sudo git clone --mirror git@github.com:Ini-effectual/my-test.git
