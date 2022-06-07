@@ -19,15 +19,15 @@ jobs:
           sudo apt-get install -y git
           git --version
           echo "Path is ... $PATH"
-          
+           
+      - name: run git commands
       - run: 'echo "$PRIVATE_KEY" > key'
         shell: bash
         env:
-          SSH_KEY: ${{secrets.PRIVATE_KEY}}
-           
-      - name: run git commands
-        run: |
-           #git config --global user.name 'Ini-effectual'
-           #git config --global user.email 'ini.inyang@effectual.com'
+          SSH_KEY: ${{secrets.PRIVATE_KEY}} 
+    
+      - run: |
+           git config --global user.name 'ssh -T git@github.com'
+           git config --global user.email 'ini.inyang@effectual.com'
            git clone git@github.com:Ini-effectual/my-demo.git
-           #git clone --mirror git@github.com:Ini-effectual/my-test.git
+           git clone --mirror git@github.com:Ini-effectual/my-test.git
