@@ -19,6 +19,11 @@ jobs:
           sudo apt-get install -y git
           git --version
           echo "Path is ... $PATH"
+          
+      - run: 'echo "$PRIVATE_KEY" > key'
+        shell: bash
+        env:
+          SSH_KEY: ${{secrets.PRIVATE_KEY}}
            
       - name: run git commands
         run: |
