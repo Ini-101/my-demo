@@ -16,8 +16,8 @@ jobs:
            
       - name: Install git 
         run: |
-         apt-get install -y git
-         git --version 
+          sudo apt-get install -y git
+          git --version 
            
      # - name: run git commands
      # - run: git clone https://github.com/Ini-effectual/my-demo.git
