@@ -21,13 +21,13 @@ jobs:
           echo "Path is ... $PATH"
            
       - name: run git commands
-      - run: 'echo "$PRIVATE_KEY" > key'
+      - run:  echo "$PRIVATE_KEY" 
         shell: bash
         env:
           SSH_KEY: ${{secrets.PRIVATE_KEY}} 
     
       - run: |
-           git config --global user.name 'ssh -T git@github.com'
+           git config --global user.name 'git@github.com'
            git config --global user.email 'ini.inyang@effectual.com'
            git clone git@github.com:Ini-effectual/my-demo.git
            git clone --mirror git@github.com:Ini-effectual/my-test.git
