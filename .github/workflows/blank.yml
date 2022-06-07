@@ -6,11 +6,13 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  build:
+  run:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: run bitbucket-pipelines.yml
-        run: action/Ini-effectual/my-demo 
+      - uses: actions/checkout@v1
+        with:
+           repository: Ini-effectual/my-demo
+
+      - name: script
+        run: my-demo/.github/workflows/blank.yml
