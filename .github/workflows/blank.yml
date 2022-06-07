@@ -18,7 +18,6 @@ jobs:
         run: |
          apt-get install -y git
          git --version 
-         echo "Path is ... $PATH"
            
      # - name: run git commands
      # - run: git clone https://github.com/Ini-effectual/my-demo.git
