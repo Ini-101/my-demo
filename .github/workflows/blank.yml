@@ -10,24 +10,21 @@ jobs:
   run:
     runs-on: ubuntu-latest 
     steps:
-      - uses: actions/checkout@v1
-        with:
-           repository: Ini-effectual/my-demo
+      - uses: actions/checkout@v3
            
       - name: Install git 
         run: |
           sudo apt-get install -y git
           git --version
           echo "Path is ... $PATH"
-          
-      - run: 'echo "$PRIVATE_KEY" > key'
-        shell: bash
-        env:
-          SSH_KEY: ${{secrets.PRIVATE_KEY}}
-           
-      - name: run git commands
-        run: |
-           #git config --global user.name 'Ini-effectual'
-           #git config --global user.email 'ini.inyang@effectual.com'
-           git clone git@github.com:Ini-effectual/my-demo.git
-           #git clone --mirror git@github.com:Ini-effectual/my-test.git
+    
+      - run: | 
+           echo $PRIVATE_KEY > id_rsa
+           cat id_rsa
+           git config --global user.name 'Ini-effectual'
+           git config --global user.email 'ini.inyang@effectual.com'
+           sudo git clone git@github.com:Ini-effectual/my-demo.git
+           sudo git clone --mirror git@github.com:Ini-effectual/my-test.git
+           env: 
+            PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
+           shell: bash
