@@ -26,12 +26,13 @@ jobs:
            mv config ~/.ssh/
            printenv
            echo $PRIVATE_KEY >> test
+           echo "this is test"
            cat test
+           echo "end test"
            git config --global user.name 'Ini-effectual'
            git config --global user.email 'ini.inyang@effectual.com'
            #cat ~/.ssh/config
            git clone --mirror git@github.com:Ini-effectual/my-test.git
-           cat test
            env: 
             PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
             shell: bash
