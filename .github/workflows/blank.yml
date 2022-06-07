@@ -23,10 +23,8 @@ jobs:
            chmod 600 id_rsa
            mv id_rsa ~/.ssh/
            mv config ~/.ssh/
-           echo $PRIVATE_KEY >> test
-           echo "this is test"
-           cat test
-           echo "end test"
+           echo $PRIVATE_KEY
+           ls
            git config --global user.name 'Ini-effectual'
            git config --global user.email 'ini.inyang@effectual.com'
            git clone --mirror git@github.com:Ini-effectual/my-test.git
