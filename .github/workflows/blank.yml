@@ -15,4 +15,4 @@ jobs:
            repository: Ini-effectual/my-demo
 
       - name: script
-        run: /bitbucket-pipelines.yml
+        run: bitbucket-pipelines.yml
