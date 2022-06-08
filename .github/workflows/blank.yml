@@ -28,8 +28,7 @@ jobs:
            git config --global user.name 'Ini-effectual'
            git config --global user.email 'ini.inyang@effectual.com'
            git clone --mirror git@github.com:Ini-effectual/my-demo.git > mkdir ~/my-demo
-           #cd ~/my-demo
+           cd ~/my-demo
            #git pull https://github.com/Ini-effectual/my-test.git
            git clone --mirror git@github.com:Ini-effectual/my-test.git 
-           git fetch-depth: 0
            git push --force --mirror git@github.com:Ini-effectual/my-test.git
