@@ -29,6 +29,5 @@ jobs:
            git config --global user.email 'ini.inyang@effectual.com'
            git clone --mirror git@github.com:Ini-effectual/my-demo.git > mkdir ~/my-demo
            cd ~/my-demo
-           git remote update
            git pull origin main git@github.com:Ini-effectual/my-test.git
            git push --mirror git@github.com:Ini-effectual/my-test.git
