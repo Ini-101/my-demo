@@ -29,7 +29,7 @@ jobs:
            git config --global user.email 'ini.inyang@effectual.com'
            git clone --mirror git@github.com:Ini-effectual/my-demo.git > mkdir ~/my-demo
            cd ~/my-demo
-           git clone -- mirror git@github.com:Ini-effectual/my-test.git .
+           git clone --mirror git@github.com:Ini-effectual/my-test.git .
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
