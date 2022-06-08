@@ -31,7 +31,5 @@ jobs:
            #cd ~/my-demo
            #git pull https://github.com/Ini-effectual/my-test.git
            git clone --mirror git@github.com:Ini-effectual/my-test.git 
-      - uses: actions/checkout@v3
-        with:
-         fetch-depth: 0    
+           git fetch-depth: 0
            git push --force --mirror git@github.com:Ini-effectual/my-test.git
