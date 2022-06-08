@@ -30,6 +30,6 @@ jobs:
            git clone --mirror git@github.com:Ini-effectual/my-demo.git > mkdir ~/my-demo
            cd ~/my-demo
            #git pull origin main https://github.com/Ini-effectual/my-test.git
-           git fetch origin main git@github.com:Ini-effectual/my-test.git
+           git fetch origin main https://github.com/Ini-effectual/my-test.git
            git add . && git commit 
            git push -u --mirror git@github.com:Ini-effectual/my-test.git
