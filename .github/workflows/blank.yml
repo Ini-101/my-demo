@@ -31,4 +31,4 @@ jobs:
            cd ~/my-demo
            git remote update
            #git pull git@github.com:Ini-effectual/my-test.git
-           git push --mirror git@github.com:Ini-effectual/mirror-my-test.git
+           git push --mirror git@github.com:Ini-effectual/my-test.git
