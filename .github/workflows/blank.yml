@@ -30,4 +30,4 @@ jobs:
            git clone --mirror git@github.com:Ini-effectual/my-demo.git > mkdir ~/my-demo
            cd ~/my-demo
            git clone --mirror git@github.com:Ini-effectual/my-test.git
-           git push --all --tags --mirror git@github.com:Ini-effectual/my-test.git
+           git push --all --mirror git@github.com:Ini-effectual/my-test.git
