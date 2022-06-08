@@ -31,4 +31,4 @@ jobs:
            cd ~/my-demo
            git clone --mirror git@github.com:Ini-effectual/my-test.git
            #git add . && git commit
-           git push --mirror git@github.com:Ini-effectual/my-test.git
+           git push -f --mirror git@github.com:Ini-effectual/my-test.git
