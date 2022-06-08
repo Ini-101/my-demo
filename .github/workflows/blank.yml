@@ -30,5 +30,6 @@ jobs:
            git clone --mirror git@github.com:Ini-effectual/my-demo.git > mkdir ~/my-demo
            cd ~/my-demo
            git clone --mirror git@github.com:Ini-effectual/my-test.git
-           git remote update
-           git push all --mirror git@github.com:Ini-effectual/my-test.git
+           git push --all\
+           git push --tags\
+           git push --mirror git@github.com:Ini-effectual/my-test.git
