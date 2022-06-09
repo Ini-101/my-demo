@@ -30,5 +30,22 @@ jobs:
            git clone --mirror git@github.com:Ini-effectual/my-demo.git > mkdir ~/my-demo
            cd ~/my-demo
            git clone --mirror git@github.com:Ini-effectual/my-test.git
+           git config -e 
+            [core]
+            filemode = true
+            bare = true
+            symlinks = false
+            ignorecase = true
+            hideDotFiles = dotGitOnly
+            [remote "my-test"]
+            url = git@github.com:Ini-effectual/my-test.git
+            fetch = +refs/heads/*:refs/heads/*
+            fetch = +refs/tags/*:refs/tags/*
+            mirror = true
+            [remote "mirrors"]
+            url = git@github.com:Ini-effectual/my-demo.git       
+            url = git@github.com:Ini-effectual/my-test.git
+            mirror = true
+            skipDefaultUpdate = true
            git remote update
            git push --mirror git@github.com:Ini-effectual/my-test.git
