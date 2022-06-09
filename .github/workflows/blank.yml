@@ -32,7 +32,7 @@ jobs:
            git config --add remote.origin.fetch +refs/heads/*:refs/heads/*
            git config --add remote.origin.fetch +refs/tags/*:refs/tags/*
            git config --get-all remote.origin.fetch
-           #git clone --mirror git@github.com:Ini-effectual/my-demo.git > mkdir ~/my-demo
+           git clone --mirror git@github.com:Ini-effectual/my-demo.git
            #cd ~/my-demo         
            #git clone --mirror git@github.com:Ini-effectual/my-test.git          
            #git remote update
