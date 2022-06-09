@@ -28,8 +28,6 @@ jobs:
            git config --global user.name 'Ini-effectual'
            git config --global user.email 'ini.inyang@effectual.com'
            git clone --mirror git@github.com:Ini-effectual/my-demo.git
-           pwd
-           cd /my-demo
            git remote set-url --push origin git@github.com:Ini-effectual/my-test.git
            git fetch -p origin
            git push --mirror
