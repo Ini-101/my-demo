@@ -30,8 +30,8 @@ jobs:
            git clone --mirror git@github.com:Ini-effectual/my-demo.git > mkdir ~/my-demo
            cd ~/my-demo
            git clone --mirror git@github.com:Ini-effectual/my-test.git
-           git config -e --global\ 
-              fetch = +refs/heads/*:refs/heads/*
-              fetch = +refs/tags/*:refs/tags/*
+           git config -e .git/config
+           echo 'fetch = +refs/heads/*:refs/heads/*
+                 fetch = +refs/tags/*:refs/tags/*' >> .git/config
            git remote update
            git push --mirror git@github.com:Ini-effectual/my-test.git
