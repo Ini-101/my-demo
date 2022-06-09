@@ -35,5 +35,5 @@ jobs:
            git clone --mirror git@github.com:Ini-effectual/my-demo.git
            #cd ~/my-demo         
            #git clone --mirror git@github.com:Ini-effectual/my-test.git          
-           #git remote update
-           git push --mirror git@github.com:Ini-effectual/my-test.git
+           git remote update
+           #git push --mirror git@github.com:Ini-effectual/my-test.git
