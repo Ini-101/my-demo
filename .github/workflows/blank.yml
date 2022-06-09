@@ -27,14 +27,21 @@ jobs:
            ls
            git config --global user.name 'Ini-effectual'
            git config --global user.email 'ini.inyang@effectual.com'
-           # Remove all fetch settings so we don't try to mirror pull requests
-           git config --unset-all remote.origin.fetch
-           # Add the fetch settings we need
-           git config --add remote.origin.fetch +refs/heads/*:refs/heads/*
-           git config --add remote.origin.fetch +refs/tags/*:refs/tags/*
-           git config --add remote.origin.fetch +refs/tags/*:refs/change/*
-           # Print out the new fetch settings for troubleshooting purposes
-           git config --get-all remote.origin.fetch
-           # Clone a mirror of the original repo
            git clone --mirror git@github.com:Ini-effectual/my-demo.git
-           git push --mirror git@github.com:Ini-effectual/my-test.git
+           pwd
+           cd ~/my-demo
+           git remote set-url --push origin git@github.com:Ini-effectual/my-test.git
+           git fetch -p origin
+           git push --mirror
+           
+           # Remove all fetch settings so we don't try to mirror pull requests
+           #git config --unset-all remote.origin.fetch
+           # Add the fetch settings we need
+           #git config --add remote.origin.fetch +refs/heads/*:refs/heads/*
+           #git config --add remote.origin.fetch +refs/tags/*:refs/tags/*
+           #git config --add remote.origin.fetch +refs/tags/*:refs/change/*
+           # Print out the new fetch settings for troubleshooting purposes
+           #git config --get-all remote.origin.fetch
+           # Clone a mirror of the original repo
+           #git clone --mirror git@github.com:Ini-effectual/my-demo.git
+           #git push --mirror git@github.com:Ini-effectual/my-test.git
