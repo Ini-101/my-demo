@@ -30,9 +30,9 @@ jobs:
            git clone --mirror git@github.com:Ini-effectual/my-demo.git > mkdir ~/my-demo
            cd ~/my-demo
            git clone --mirror git@github.com:Ini-effectual/my-test.git
-           git config -e --global
+           git config -e --system
             [core]
-            filemode = true
+            filemode = false
             bare = true
             symlinks = false
             ignorecase = true
