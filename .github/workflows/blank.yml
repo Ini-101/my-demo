@@ -31,8 +31,8 @@ jobs:
            cd ~/my-demo
            git clone --mirror git@github.com:Ini-effectual/my-test.git
            git config --unset-all remote.origin.fetch
+           git config --get-all remote.origin.fetch
            git config --add remote.origin.fetch +refs/heads/*:refs/heads/*
            git config --add remote.origin.fetch +refs/tags/*:refs/tags/*
-           git config --get-all remote.origin.fetch
            git remote update
            git push --mirror git@github.com:Ini-effectual/my-test.git
