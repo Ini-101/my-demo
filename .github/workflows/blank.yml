@@ -30,7 +30,7 @@ jobs:
            git clone --mirror git@github.com:Ini-effectual/my-demo.git > mkdir ~/my-demo
            cd ~/my-demo
            git clone --mirror git@github.com:Ini-effectual/my-test.git
-           git config -e 
+           git config -e -f
             [core]
             filemode = true
             bare = true
