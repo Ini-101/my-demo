@@ -38,5 +38,5 @@ jobs:
            # Clone a mirror of the original repo
            git clone --mirror git@github.com:Ini-effectual/my-demo.git
            #git clone --mirror git@github.com:Ini-effectual/my-test.git          
-           git remote update
+           git remotes/origin update
            #git push --mirror git@github.com:Ini-effectual/my-test.git
