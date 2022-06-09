@@ -26,6 +26,7 @@ jobs:
            echo $PRIVATE_KEY
            git config --global user.name 'Ini-effectual'
            git config --global user.email 'ini.inyang@effectual.com'
+           # https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository#mirroring-a-repository-in-another-location
            git clone --mirror git@github.com:Ini-effectual/my-demo.git
            git fetch --unshallow
            git remote set-url --push origin git@github.com:Ini-effectual/my-test.git
