@@ -27,13 +27,16 @@ jobs:
            ls
            git config --global user.name 'Ini-effectual'
            git config --global user.email 'ini.inyang@effectual.com'
-           git config --get-all remote.origin.fetch
+           # Remove all fetch settings so we don't try to mirror pull requests
            git config --unset-all remote.origin.fetch
+           # Add the fetch settings we need
            git config --add remote.origin.fetch +refs/heads/*:refs/heads/*
            git config --add remote.origin.fetch +refs/tags/*:refs/tags/*
+           git config --add remote.origin.fetch +refs/tags/*:refs/change/*
+           # Print out the new fetch settings for troubleshooting purposes
            git config --get-all remote.origin.fetch
+           # Clone a mirror of the original repo
            git clone --mirror git@github.com:Ini-effectual/my-demo.git
-           #cd ~/my-demo         
            #git clone --mirror git@github.com:Ini-effectual/my-test.git          
            git remote update
            #git push --mirror git@github.com:Ini-effectual/my-test.git
