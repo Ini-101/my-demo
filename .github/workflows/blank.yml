@@ -27,7 +27,7 @@ jobs:
            ls
            git config --global user.name 'Ini-effectual'
            git config --global user.email 'ini.inyang@effectual.com'
-           git clone --mirror git@github.com:Ini-effectual/my-demo.git >> mkdir ~/my-demo
+           git clone --mirror git@github.com:Ini-effectual/my-demo.git > mkdir ~/my-demo
            cd ~/my-demo
            git clone --mirror git@github.com:Ini-effectual/my-test.git
            git config --file --global -e 
