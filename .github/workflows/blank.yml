@@ -32,6 +32,6 @@ jobs:
            git clone --mirror git@github.com:Ini-effectual/my-test.git
            git config --file --global -e 
            echo "fetch = +refs/heads/*:refs/heads/*
-                 fetch = +refs/tags/*:refs/tags/*" >> ~/.git/config
+                 fetch = +refs/tags/*:refs/tags/*" >> ~/.gitconfig
            git remote update
            git push --mirror git@github.com:Ini-effectual/my-test.git
