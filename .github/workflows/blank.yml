@@ -28,7 +28,7 @@ jobs:
            git config --global user.name 'Ini-effectual'
            git config --global user.email 'ini.inyang@effectual.com'
            git config --unset-all remote.origin.fetch
-           #git config --add remote.origin.fetch +refs/heads/*:refs/heads/*
+           git config --add remote.origin.fetch +refs/heads/*:refs/heads/*
            git config --get-all remote.origin.fetch
            #git config --add remote.origin.fetch +refs/tags/*:refs/tags/*
            #git clone --mirror git@github.com:Ini-effectual/my-demo.git > mkdir ~/my-demo
