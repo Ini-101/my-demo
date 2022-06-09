@@ -31,8 +31,6 @@ jobs:
            cd ~/my-demo
            git clone --mirror git@github.com:Ini-effectual/my-test.git
            git config -e --global
-            [remote "my-test"]
-            url = git@github.com:Ini-effectual/my-test.git
             fetch = +refs/heads/*:refs/heads/*
             fetch = +refs/tags/*:refs/tags/*
            git remote update
