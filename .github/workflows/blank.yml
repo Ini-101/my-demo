@@ -24,16 +24,16 @@ jobs:
            mv id_rsa ~/.ssh/
            mv config ~/.ssh/
            echo $PRIVATE_KEY
-           git config --global user.name 'Ini-effectual'
+           git config --global user.name 'Ini-101'
            git config --global user.email 'ini.inyang@effectual.com'
            # https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository#mirroring-a-repository-in-another-location
-           git clone --mirror git@github.com:Ini-effectual/my-demo.git
+           git clone --mirror git@github.com:Ini-101/my-demo.git
            git fetch --unshallow
-           git remote set-url --push origin git@github.com:Ini-effectual/my-test.git
+           git remote set-url --push origin git@github.com:Ini-101/my-test.git
            git fetch -p origin
            git push --mirror
-           git clone --mirror git@github.com:Ini-effectual/my-test.git 
-           git remote set-url --push origin git@github.com:Ini-effectual/my-demo.git
-           git push --mirror git@github.com:Ini-effectual/my-demo.git
+           git clone --mirror git@github.com:Ini-101/my-test.git 
+           git remote set-url --push origin git@github.com:Ini-101/my-demo.git
+           git push --mirror git@github.com:Ini-101/my-demo.git
            
        
