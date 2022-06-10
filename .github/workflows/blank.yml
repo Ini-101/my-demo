@@ -32,5 +32,9 @@ jobs:
            git remote set-url --push origin git@github.com:Ini-effectual/my-test.git
            git fetch -p origin
            git push --mirror
-           git fetch origin git@github.com:Ini-effectual/my-test.git 
+           git clone --mirror git@github.com:Ini-effectual/my-test.git 
+           git fetch --unshallow
+           git remote set-url --push origin git@github.com:Ini-effectual/my-demo.git
            git push --mirror git@github.com:Ini-effectual/my-demo.git
+           
+       
